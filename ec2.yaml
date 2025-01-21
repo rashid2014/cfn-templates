@@ -15,11 +15,12 @@ Parameters:
       - t3.micro
       - t3.medium
   SubnetID:
-    Type: String
+    Type: List<AWS::EC2::Subnet::Id>
     Description: Enter your SubnetID
   SecurityGroupID:
-    Type: String
+    Type: List<AWS::EC2::SecurityGroup::Id>
     Description: Enter your SecurityGroupID
+    
 
   
 Resources:
