@@ -6,9 +6,9 @@ env:
     TEMPLATE_FILE: "application-cfn.yaml"
   parameter-store:
     PARAMETERS: |
-                ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad 
-                ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d 
-                ParameterKey=SubnetID1,ParameterValue=subnet-05badfe3396ca4402 
+                ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad
+                ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d
+                ParameterKey=SubnetID1,ParameterValue=subnet-05badfe3396ca4402
                 ParameterKey=SubnetID2,ParameterValue=subnet-05a218529c1a9dc62
                 ParameterKey=ASGMinValue,ParameterValue=2
                 ParameterKey=ASGMaxValue,ParameterValue=10
