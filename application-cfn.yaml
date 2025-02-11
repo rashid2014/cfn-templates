@@ -6,14 +6,17 @@ Parameters:
   EC2SGName:
     Description: Enter your EC2 SG Name
     Type: String
+    Default: "Application-EC2-SG-New"
 
   ALBSGName:
     Description: Enter your ALB SG Name
     Type: String
+    Default: "Application-ALB-SG-New"
   
   LaunchTemplateName:
     Description: Enter your EC2 Launch Template Name
     Type: String
+    Default: "Application-Launch-Template-New"
   
   AMIID:
     Description: Enter your EC2 AMI ID
@@ -31,18 +34,22 @@ Parameters:
   TargetGroupName:
     Description: Enter your ALB TargetGroupName
     Type: String
+    Default: "Application-ALB-TG"
   
   TargetGroupPort:
     Description: Enter your ALB Targets Port
     Type: Number
+    Default: 80
 
   ALBName:
     Description: Enter your ALB Name
     Type: String
+    Default: "Application-ALB"
   
   ALBScheme:
     Description: Define your Public or Private Scheme for Load Balancer
     Type: String
+    Default: internet-facing
     AllowedValues:
       - internet-facing
       - internal
@@ -58,6 +65,7 @@ Parameters:
   LBType:
     Description: Define your Load Balancer Type
     Type: String
+    Default: application
     AllowedValues:
       - application
       - network
@@ -65,6 +73,7 @@ Parameters:
   ASGName:
     Description: Enter your ASG Name
     Type: String
+    Default: "Application-ASG"
   
   ASGMinValue:
     Description: Enter your Min Size of ASG
@@ -77,7 +86,7 @@ Parameters:
   ASGScalingThreshold:
     Description: Enter your CPU Utilization Threshold
     Type: String
-    Default: 50.0
+    Default: 60.0
 
 
 Resources:
