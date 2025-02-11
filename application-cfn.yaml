@@ -11,7 +11,7 @@ Parameters:
   ALBSGName:
     Description: Enter your ALB SG Name
     Type: String
-    Default: "Application-ALB-SG-New"
+    Default: "Application-ALB-SG-Public"
   
   LaunchTemplateName:
     Description: Enter your EC2 Launch Template Name
