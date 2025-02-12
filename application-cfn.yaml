@@ -2,6 +2,7 @@ Parameters:
   VpcID:
     Description: Enter your VPC ID
     Type: String
+    Default: vpc-0d5d4b0f4e6f895ad
 
   EC2SGName:
     Description: Enter your EC2 SG Name
@@ -21,6 +22,7 @@ Parameters:
   AMIID:
     Description: Enter your EC2 AMI ID
     Type: String
+    Default: ami-0db18496905e01e3d
 
   InstanceType:
     Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
@@ -57,10 +59,12 @@ Parameters:
   SubnetID1:
     Description: Enter your AZ1 SubnetID
     Type: String
+    Default: subnet-05badfe3396ca4402
   
   SubnetID2:
     Description: Enter your AZ2 SubnetID
     Type: String
+    Default: subnet-05a218529c1a9dc62
 
   LBType:
     Description: Define your Load Balancer Type
@@ -78,10 +82,12 @@ Parameters:
   ASGMinValue:
     Description: Enter your Min Size of ASG
     Type: String
+    Default: "2"
 
   ASGMaxValue:
     Description: Enter your Max Size of ASG
     Type: String
+    Default: "10"
 
   ASGScalingThreshold:
     Description: Enter your CPU Utilization Threshold
