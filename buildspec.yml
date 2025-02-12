@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    STACK_NAME: "application-stack"
+    STACK_NAME: "application-stack4"
     TEMPLATE_FILE: "application-cfn.yaml"
     PARAMETERS: | 
                 ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad
