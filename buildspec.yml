@@ -4,13 +4,7 @@ env:
   variables:
     STACK_NAME: "application-stack"
     TEMPLATE_FILE: "application-cfn.yaml"
-    PARAMETERS: |
-                ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad
-                ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d
-                ParameterKey=SubnetID1,ParameterValue=subnet-05badfe3396ca4402
-                ParameterKey=SubnetID2,ParameterValue=subnet-05a218529c1a9dc62
-                ParameterKey=ASGMinValue,ParameterValue=2
-                ParameterKey=ASGMaxValue,ParameterValue=10
+    PARAMETERS: ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad ParameterKey=AMIID,ParameterValue=ami-0db18496905e01e3d ParameterKey=SubnetID1,ParameterValue=subnet-05badfe3396ca4402 ParameterKey=SubnetID2,ParameterValue=subnet-05a218529c1a9dc62 ParameterKey=ASGMinValue,ParameterValue=2 ParameterKey=ASGMaxValue,ParameterValue=10
 
 phases:
   install:
@@ -31,7 +25,7 @@ phases:
   build:
     commands:
       - echo "Deploying CloudFormation stack..."
-      - aws cloudformation deploy --template-file ${TEMPLATE_FILE} --stack-name ${STACK_NAME} --region $AWS_REGION --capabilities CAPABILITY_NAMED_IAM --parameter-overrides $(echo "${PARAMETERS}" | tr '\n' ' ')
+      - aws cloudformation deploy --template-file ${TEMPLATE_FILE} --stack-name ${STACK_NAME} --region $AWS_REGION --capabilities CAPABILITY_NAMED_IAM --parameter-overrides ${PARAMETERS}
 
   post_build:
     commands:
