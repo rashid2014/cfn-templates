@@ -2,10 +2,11 @@ Parameters:
   EC2AMIID:
     Type: String
     Description: Enter your EC2 AMI ID based on your OS
-    Default: ami-09ca61dde3dc883d0
+    Default: ami-03814457ed908d8f6
   EC2KeyPairName:
     Type: String
     Description: Select your desired keypair
+    Default: metrocanadakp
   EC2InstanceType:
     Type: String
     Description: Enter your EC2 Instance Type
@@ -17,9 +18,11 @@ Parameters:
   SubnetID:
     Type: String
     Description: Enter your SubnetID
+    Default: subnet-05badfe3396ca4402
   SecurityGroupID:
     Type: String
     Description: Enter your SecurityGroupID
+    Default: sg-003f511e812626256
     
 
   
