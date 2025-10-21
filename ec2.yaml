@@ -4,7 +4,7 @@ Parameters:
     Description: Enter your EC2 AMI ID based on your OS
     Default: ami-09ca61dde3dc883d0
   EC2KeyPairName:
-    Type: AWS::EC2::KeyPair::KeyName
+    Type: String
     Description: Select your desired keypair
   EC2InstanceType:
     Type: String
@@ -15,10 +15,10 @@ Parameters:
       - t3.micro
       - t3.medium
   SubnetID:
-    Type: List<AWS::EC2::Subnet::Id>
+    Type: String
     Description: Enter your SubnetID
   SecurityGroupID:
-    Type: List<AWS::EC2::SecurityGroup::Id>
+    Type: String
     Description: Enter your SecurityGroupID
     
 
