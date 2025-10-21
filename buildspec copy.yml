@@ -2,15 +2,15 @@ version: 0.2
 
 env:
   variables:
-    STACK_NAME: "application-ec2-stack"
-    TEMPLATE_FILE: "ec2.yaml"
+    STACK_NAME: "application-stack4"
+    TEMPLATE_FILE: "application-cfn.yaml"
     PARAMETERS: | 
-                ParameterKey=EC2AMIID,ParameterValue=ami-03814457ed908d8f6
-                ParameterKey=EC2KeyPairName,ParameterValue=metrocanadakp
-                ParameterKey=EC2InstanceType,ParameterValue=t2.micro
-                ParameterKey=SubnetID,ParameterValue=subnet-05badfe3396ca4402
-                ParameterKey=SecurityGroupID,ParameterValue=sg-003f511e812626256
-            
+                ParameterKey=VpcID,ParameterValue=vpc-0d5d4b0f4e6f895ad
+                ParameterKey=AMIID,ParameterValue=ami-0750ad3fb18154b1b
+                ParameterKey=SubnetID1,ParameterValue=subnet-05badfe3396ca4402
+                ParameterKey=SubnetID2,ParameterValue=subnet-05a218529c1a9dc62 
+                ParameterKey=ASGMinValue,ParameterValue=2 
+                ParameterKey=ASGMaxValue,ParameterValue=10
 
 phases:
   install:
