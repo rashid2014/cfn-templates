@@ -4,12 +4,7 @@ env:
   variables:
     STACK_NAME: "application-ec2-stack"
     TEMPLATE_FILE: "ec2.yaml"
-    PARAMETERS: | 
-                ParameterKey=EC2AMIID,ParameterValue=ami-03814457ed908d8f6
-                ParameterKey=EC2KeyPairName,ParameterValue=metrocanadakp
-                ParameterKey=EC2InstanceType,ParameterValue=t2.micro
-                ParameterKey=SubnetID,ParameterValue=subnet-05badfe3396ca4402
-                ParameterKey=SecurityGroupID,ParameterValue=sg-003f511e812626256
+    PARAMETERS: ParameterKey=EC2AMIID,ParameterValue=ami-03814457ed908d8f6 ParameterKey=EC2KeyPairName,ParameterValue=metrocanadakp ParameterKey=EC2InstanceType,ParameterValue=t2.micro ParameterKey=SubnetID,ParameterValue=subnet-05badfe3396ca4402 ParameterKey=SecurityGroupID,ParameterValue=sg-003f511e812626256"
             
 
 phases:
